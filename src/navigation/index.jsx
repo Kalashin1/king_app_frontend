@@ -1,0 +1,32 @@
+import { createBrowserRouter } from "react-router-dom";
+import Home from "../pages/home";
+import Shop from '../pages/shop';
+import Product from "../pages/product";
+import { SCREENS } from "./constants";
+import Cart from "../pages/cart";
+import Contact from "../pages/contact";
+
+const router = createBrowserRouter([
+  {
+    index: true,
+    element: <Home />
+  },
+  {
+    path: SCREENS.SHOP,
+    element: <Shop />
+  },
+  {
+    path: SCREENS.PRODUCT(),
+    element: <Product />
+  },
+  {
+    path: SCREENS.CART(),
+    element: <Cart />
+  },
+  {
+    path: SCREENS.CONTACT,
+    element: <Contact />
+  }
+])
+
+export default router;
