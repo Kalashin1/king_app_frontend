@@ -1,4 +1,9 @@
-const Navbar = () => {
+import { Link } from "react-router-dom";
+
+/* eslint-disable react/prop-types */
+const Navbar = ({
+  courses
+}) => {
   return (
     <div className="container-fluid mb-5">
       <div className="row border-top px-xl-5">
@@ -10,22 +15,14 @@ const Navbar = () => {
           <nav className="collapse show navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0" id="navbar-vertical">
             <div className="navbar-nav w-100 overflow-hidden" style={{ height: '410px' }}>
               <div className="nav-item dropdown">
-                <a href="#" className="nav-link" data-toggle="dropdown">Dresses <i className="fa fa-angle-down float-right mt-1"></i></a>
+                <a href="#" className="nav-link" data-toggle="dropdown">Courses<i className="fa fa-angle-down float-right mt-1"></i></a>
                 <div className="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
-                  <a href="" className="dropdown-item">Mens Dresses</a>
-                  <a href="" className="dropdown-item">Womens Dresses</a>
-                  <a href="" className="dropdown-item">Babys Dresses</a>
+                  {courses?.map((course, index) => (
+                    <a href="" className="dropdown-item" key={index}>{course.title}</a>
+                  ))}
                 </div>
               </div>
-              <a href="" className="nav-item nav-link">Shirts</a>
-              <a href="" className="nav-item nav-link">Jeans</a>
-              <a href="" className="nav-item nav-link">Swimwear</a>
-              <a href="" className="nav-item nav-link">Sleepwear</a>
-              <a href="" className="nav-item nav-link">Sportswear</a>
-              <a href="" className="nav-item nav-link">Jumpsuits</a>
-              <a href="" className="nav-item nav-link">Blazers</a>
-              <a href="" className="nav-item nav-link">Jackets</a>
-              <a href="" className="nav-item nav-link">Shoes</a>
+              <a href="" className="nav-item nav-link">Plans</a>
             </div>
           </nav>
         </div>
@@ -39,17 +36,11 @@ const Navbar = () => {
             </button>
             <div className="collapse navbar-collapse justify-content-between" id="navbarCollapse">
               <div className="navbar-nav mr-auto py-0">
-                <a href="index.html" className="nav-item nav-link active">Home</a>
-                <a href="shop.html" className="nav-item nav-link">Shop</a>
-                <a href="detail.html" className="nav-item nav-link">Shop Detail</a>
-                <div className="nav-item dropdown">
-                  <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                  <div className="dropdown-menu rounded-0 m-0">
-                    <a href="cart.html" className="dropdown-item">Shopping Cart</a>
-                    <a href="checkout.html" className="dropdown-item">Checkout</a>
-                  </div>
-                </div>
-                <a href="contact.html" className="nav-item nav-link">Contact</a>
+                <Link to="/" className="nav-item nav-link active">Home</Link>
+                <Link to="/shop" className="nav-item nav-link">Plans</Link>
+                <Link to="/shop" className="nav-item nav-link">Courses</Link>
+                <Link to="/detail" className="nav-item nav-link">About Us</Link>
+                <Link to="/contact" className="nav-item nav-link">Contact</Link>
               </div>
               <div className="navbar-nav ml-auto py-0">
                 <a href="" className="nav-item nav-link">Login</a>
@@ -60,21 +51,21 @@ const Navbar = () => {
           <div id="header-carousel" className="carousel slide" data-ride="carousel">
             <div className="carousel-inner">
               <div className="carousel-item active" style={{ height: '410px' }}>
-                <img className="img-fluid" src="img/carousel-1.jpg" alt="Image" />
+                <img className="img-fluid" src="/images/pexels-karolina-grabowska-4491459.jpg" alt="Image" />
                 <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
                   <div className="p-3" style={{ maxWidth: '700px' }}>
                     <h4 className="text-light text-uppercase font-weight-medium mb-3">10% Off Your First Order</h4>
-                    <h3 className="display-4 text-white font-weight-semi-bold mb-4">Fashionable Dress</h3>
+                    <h3 className="display-4 text-white font-weight-semi-bold mb-4">Building Plans</h3>
                     <a href="" className="btn btn-light py-2 px-3">Shop Now</a>
                   </div>
                 </div>
               </div>
               <div className="carousel-item" style={{ height: '410px' }}>
-                <img className="img-fluid" src="img/carousel-2.jpg" alt="Image" />
+                <img className="img-fluid" src="/public/images/pexels-katerina-holmes-5905492.jpg" alt="Image" />
                 <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
                   <div className="p-3" style={{ maxWidth: '700px' }}>
                     <h4 className="text-light text-uppercase font-weight-medium mb-3">10% Off Your First Order</h4>
-                    <h3 className="display-4 text-white font-weight-semi-bold mb-4">Reasonable Price</h3>
+                    <h3 className="display-4 text-white font-weight-semi-bold mb-4">Engineering Courses</h3>
                     <a href="" className="btn btn-light py-2 px-3">Shop Now</a>
                   </div>
                 </div>
