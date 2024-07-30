@@ -1,8 +1,15 @@
-const ProductDescription = () => {
+import { formatAsCurrency } from "../../helper";
+
+/* eslint-disable react/prop-types */
+const ProductDescription = ({
+  title,
+  price,
+  description
+}) => {
   return (
     <div className="col-lg-7 pb-5">
-      <h3 className="font-weight-semi-bold">Colorful Stylish Shirt</h3>
-      <div className="d-flex mb-3">
+      <h3 className="font-weight-semi-bold">{title}</h3>
+      {/* <div className="d-flex mb-3">
         <div className="text-primary mr-2">
           <small className="fas fa-star"></small>
           <small className="fas fa-star"></small>
@@ -11,10 +18,10 @@ const ProductDescription = () => {
           <small className="far fa-star"></small>
         </div>
         <small className="pt-1">(50 Reviews)</small>
-      </div>
-      <h3 className="font-weight-semi-bold mb-4">$150.00</h3>
-      <p className="mb-4">Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc invidunt ipsum et, labore clita lorem magna lorem ut. Erat lorem duo dolor no sea nonumy. Accus labore stet, est lorem sit diam sea et justo, amet at lorem et eirmod ipsum diam et rebum kasd rebum.</p>
-      <div className="d-flex mb-3">
+      </div> */}
+      <h3 className="font-weight-semi-bold mb-4">{formatAsCurrency(price, 'USD')}</h3>
+      <p className="mb-4">{description}</p>
+      {/* <div className="d-flex mb-3">
         <p className="text-dark font-weight-medium mb-0 mr-3">Sizes:</p>
         <form>
           <div className="custom-control custom-radio custom-control-inline">
@@ -63,9 +70,9 @@ const ProductDescription = () => {
             <label className="custom-control-label" htmlFor="color-5">Green</label>
           </div>
         </form>
-      </div>
+      </div> */}
       <div className="d-flex align-items-center mb-4 pt-2">
-        <div className="input-group quantity mr-3" style={{ width: '130px' }}>
+        {/* <div className="input-group quantity mr-3" style={{ width: '130px' }}>
           <div className="input-group-btn">
             <button className="btn btn-primary btn-minus" >
               <i className="fa fa-minus"></i>
@@ -77,7 +84,7 @@ const ProductDescription = () => {
               <i className="fa fa-plus"></i>
             </button>
           </div>
-        </div>
+        </div> */}
         <button className="btn btn-primary px-3"><i className="fa fa-shopping-cart mr-1"></i> Add To Cart</button>
       </div>
       <div className="d-flex pt-2">

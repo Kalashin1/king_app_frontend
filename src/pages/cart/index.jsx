@@ -5,6 +5,8 @@ import CartItems from "./components/cart-items"
 import CartSummary from "./components/cart-summary"
 
 const Cart = () => {
+
+
   return (
     <Layout showCustomNavbar={true} CustomNavbar={Navbar}>
       <BreadCrumb />

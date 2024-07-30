@@ -5,6 +5,7 @@ import Product from "../pages/product";
 import { SCREENS } from "./constants";
 import Cart from "../pages/cart";
 import Contact from "../pages/contact";
+import Course from "../pages/course";
 
 const router = createBrowserRouter([
   {
@@ -16,11 +17,15 @@ const router = createBrowserRouter([
     element: <Shop />
   },
   {
-    path: SCREENS.PRODUCT(),
+    path: SCREENS.PLAN(),
     element: <Product />
   },
   {
-    path: SCREENS.CART(),
+    path: SCREENS.COURSE(),
+    element: <Course />
+  },
+  {
+    path: SCREENS.CART,
     element: <Cart />
   },
   {

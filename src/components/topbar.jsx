@@ -1,4 +1,14 @@
+import { useContext } from "react";
+import { ShopContext } from "../pages/layout";
+import { SCREENS } from "../navigation/constants";
+import { Link } from "react-router-dom";
 const Topbar = () => {
+
+  const {
+    cart,
+    // updateCart
+  } = useContext(ShopContext)
+  console.log("cart", cart);
   return (
     <div className="container-fluid">
       <div className="row bg-secondary py-2 px-xl-5">
@@ -34,7 +44,7 @@ const Topbar = () => {
       <div className="row align-items-center py-3 px-xl-5">
         <div className="col-lg-3 d-none d-lg-block">
           <a href="" className="text-decoration-none">
-            <h1 className="m-0 display-5 font-weight-semi-bold"><span className="text-primary font-weight-bold border px-3 mr-1">E</span>Shopper</h1>
+            <img width={80} height={80} src="/images/logo.svg" />
           </a>
         </div>
         <div className="col-lg-6 col-6 text-left">
@@ -54,10 +64,10 @@ const Topbar = () => {
             <i className="fas fa-heart text-primary"></i>
             <span className="badge">0</span>
           </a>
-          <a href="" className="btn border">
+          <Link to={SCREENS.CART} className="btn border">
             <i className="fas fa-shopping-cart text-primary"></i>
-            <span className="badge">0</span>
-          </a>
+            <span className="badge">{cart.length}</span>
+          </Link>
         </div>
       </div>
     </div>

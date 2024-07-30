@@ -1,4 +1,10 @@
-const Navbar = () => {
+/* eslint-disable react/prop-types */
+import { Link } from "react-router-dom";
+import { SCREENS } from "../../../navigation/constants";
+
+const Navbar = ({
+  courses
+}) => {
   return (
     <div className="container-fluid">
       <div className="row border-top px-xl-5">
@@ -10,46 +16,46 @@ const Navbar = () => {
           <nav className="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0 bg-light" id="navbar-vertical" style={{ width: 'calc(100% - 30px)', zIndex: 1 }}>
             <div className="navbar-nav w-100 overflow-hidden" style={{ height: '410px' }}>
               <div className="nav-item dropdown">
-                <a href="#" className="nav-link" data-toggle="dropdown">Dresses <i className="fa fa-angle-down float-right mt-1"></i></a>
+                <Link to="#" className="nav-link" data-toggle="dropdown">Courses <i className="fa fa-angle-down float-right mt-1"></i></Link>
                 <div className="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
-                  <a href="" className="dropdown-item">Mens Dresses</a>
-                  <a href="" className="dropdown-item">Womens Dresses</a>
-                  <a href="" className="dropdown-item">Babys Dresses</a>
+                  {courses && courses.map((course, index) => (
+                    <Link to={SCREENS.COURSE(course.id)} className="dropdown-item" key={index}>{course.title}</Link>
+                  ))}
                 </div>
               </div>
-              <a href="" className="nav-item nav-link">Shirts</a>
-              <a href="" className="nav-item nav-link">Jeans</a>
+              <Link to={SCREENS.SHOP} className="nav-item nav-link">Plans</Link>
+              {/* <a href="" className="nav-item nav-link">Jeans</a>
               <a href="" className="nav-item nav-link">Swimwear</a>
               <a href="" className="nav-item nav-link">Sleepwear</a>
               <a href="" className="nav-item nav-link">Sportswear</a>
               <a href="" className="nav-item nav-link">Jumpsuits</a>
               <a href="" className="nav-item nav-link">Blazers</a>
               <a href="" className="nav-item nav-link">Jackets</a>
-              <a href="" className="nav-item nav-link">Shoes</a>
+              <a href="" className="nav-item nav-link">Shoes</a> */}
             </div>
           </nav>
         </div>
         <div className="col-lg-9">
           <nav className="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
             <a href="" className="text-decoration-none d-block d-lg-none">
-              <h1 className="m-0 display-5 font-weight-semi-bold"><span className="text-primary font-weight-bold border px-3 mr-1">E</span>Shopper</h1>
+              <img width={100} height={100} src="/images/logo.svg" />
             </a>
             <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse justify-content-between" id="navbarCollapse">
               <div className="navbar-nav mr-auto py-0">
-                <a href="index.html" className="nav-item nav-link">Home</a>
-                <a href="shop.html" className="nav-item nav-link active">Shop</a>
-                <a href="detail.html" className="nav-item nav-link">Shop Detail</a>
-                <div className="nav-item dropdown">
+                <Link to="/" className="nav-item nav-link">Home</Link>
+                <Link to={SCREENS.SHOP} className="nav-item nav-link active">Plans</Link>
+                <Link to={SCREENS.SHOP} className="nav-item nav-link">Courses</Link>
+                <Link to={SCREENS.CONTACT} className="nav-item nav-link">Contact</Link>
+                {/* <div className="nav-item dropdown">
                   <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                   <div className="dropdown-menu rounded-0 m-0">
                     <a href="cart.html" className="dropdown-item">Shopping Cart</a>
                     <a href="checkout.html" className="dropdown-item">Checkout</a>
                   </div>
-                </div>
-                <a href="contact.html" className="nav-item nav-link">Contact</a>
+                </div> */}
               </div>
               <div className="navbar-nav ml-auto py-0">
                 <a href="" className="nav-item nav-link">Login</a>

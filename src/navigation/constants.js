@@ -1,6 +1,8 @@
 export const SCREENS = {
   SHOP: '/shop',
-  PRODUCT: (id) => `/product/${id ? id : ':id'}`,
-  CART: (user_id) => `/cart/${user_id ? user_id : ':user_id'}`,
+  PLAN: (id) => `/plan/${id ? id : ':id'}`,
+  COURSE: (id) => `/course/${id ? id : ":id"}`,
+  CART: "/cart/",
   CONTACT: '/contact',
+
 }
