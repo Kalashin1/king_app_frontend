@@ -7,12 +7,17 @@ import { useEffect, useState } from "react";
 import { getDBITEMS } from "../home/helper";
 
 const Shop = () => {
-  const [plans, setPlans] = useState([])
+
+  const [products, setProducts] = useState([])
 
   useEffect(() => {
     const setup = async () => {
-      const [, _plans] = await getDBITEMS()
-      setPlans(_plans)
+      const [_courses, _plans] = await getDBITEMS()
+      const _products = [
+        ..._plans.map((plan) => ({ ...plan, type: "plan" })),
+        ..._courses.map((course) => ({ ...course, type: "course" }))
+      ].sort((a, b) => a.title > b.title)
+      setProducts(_products)
     }
 
     setup();
@@ -50,9 +55,10 @@ const Shop = () => {
                   </div>
                 </div>
               </div>
-              {plans.map((plan, index) => (
-                <Products key={index} price={plan.price} title={plan.title} thumbnail={plan.thumbnail} id={plan.id} />
+              {products.map((product, index) => (
+                <Products key={index} {...product} />
               ))}
+              { }
             </div>
           </div>
         </div>

@@ -33,7 +33,7 @@ const Product = () => {
       <div className="container-fluid py-5">
         <div className="row px-xl-5">
           <ProductImageCarousel images={[plan?.thumbnail]} />
-          <ProductDescription description={plan?.description} price={plan?.price} title={plan?.title} />
+          <ProductDescription description={plan?.description} price={plan?.price} title={plan?.title} link={plan?.link} />
         </div>
         {/* <div className="row px-xl-5">
           <div className="col">

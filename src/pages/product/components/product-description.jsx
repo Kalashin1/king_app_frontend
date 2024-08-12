@@ -4,7 +4,8 @@ import { formatAsCurrency } from "../../helper";
 const ProductDescription = ({
   title,
   price,
-  description
+  description,
+  link
 }) => {
   return (
     <div className="col-lg-7 pb-5">
@@ -85,7 +86,7 @@ const ProductDescription = ({
             </button>
           </div>
         </div> */}
-        <button className="btn btn-primary px-3"><i className="fa fa-shopping-cart mr-1"></i> Add To Cart</button>
+        <a href={link} className="btn btn-primary px-3"><i className="fa fa-shopping-cart mr-1"></i> Add To Cart</a>
       </div>
       <div className="d-flex pt-2">
         <p className="text-dark font-weight-medium mb-0 mr-2">Share on:</p>

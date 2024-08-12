@@ -36,7 +36,7 @@ const Course = () => {
       <div className="container-fluid py-5">
         <div className="row px-xl-5">
           <ProductImageCarousel images={[course?.thumbnail]} />
-          <ProductDescription description={course?.description} price={course?.price} title={course?.title} />
+          <ProductDescription description={course?.description} price={course?.price} title={course?.title} link={course?.link} />
         </div>
         {/* <div className="row px-xl-5">
           <div className="col">

@@ -9,6 +9,7 @@ const Products = ({
   title,
   thumbnail,
   id,
+  type
 }) => {
   const {
     cart,
@@ -28,7 +29,8 @@ const Products = ({
           </div>
         </div>
         <div className="card-footer d-flex justify-content-between bg-light border">
-          <Link to={SCREENS.PLAN(id)} className="btn btn-sm text-dark p-0"><i className="fas fa-eye text-primary mr-1"></i>View Detail</Link>
+          {type === "plan" && (<Link to={SCREENS.PLAN(id)} className="btn btn-sm text-dark p-0"><i className="fas fa-eye text-primary mr-1"></i>View Detail</Link>)}
+          {type === "course" && (<Link to={SCREENS.COURSE(id)} className="btn btn-sm text-dark p-0"><i className="fas fa-eye text-primary mr-1"></i>View Detail</Link>)}
           <button onClick={() => {
             const product = cart?.find((item) => item.id === id);
             if (product)
