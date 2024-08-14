@@ -1,20 +1,21 @@
 import { Link } from "react-router-dom";
 import { SCREENS } from "../../../navigation/constants";
-import { ShopContext } from "../../layout";
-import { useContext } from "react";
-import { updateCartItemAmount } from "../helper";
+// import { ShopContext } from "../../layout";
+// import { useContext } from "react";
+// import { updateCartItemAmount } from "../helper";
 /* eslint-disable react/prop-types */
 const Products = ({
   price,
   title,
   thumbnail,
   id,
-  type
+  type,
+  link
 }) => {
-  const {
-    cart,
-    updateCart
-  } = useContext(ShopContext)
+  // const {
+  //   cart,
+  //   updateCart
+  // } = useContext(ShopContext)
   return (
 
     <div className="col-lg-4 col-md-6 col-sm-12 pb-1">
@@ -31,28 +32,32 @@ const Products = ({
         <div className="card-footer d-flex justify-content-between bg-light border">
           {type === "plan" && (<Link to={SCREENS.PLAN(id)} className="btn btn-sm text-dark p-0"><i className="fas fa-eye text-primary mr-1"></i>View Detail</Link>)}
           {type === "course" && (<Link to={SCREENS.COURSE(id)} className="btn btn-sm text-dark p-0"><i className="fas fa-eye text-primary mr-1"></i>View Detail</Link>)}
-          <button onClick={() => {
-            const product = cart?.find((item) => item.id === id);
-            if (product)
-              updateCart(
-                updateCartItemAmount(
-                  cart,
-                  product,
-                  "INCREAMENT"
-                )
-              );
-            else {
-              updateCart([...(cart ?? []), { title, price, id, thumbnail, amount: 1 }]);
-              localStorage.setItem(
-                "cart",
-                JSON.stringify([...(cart ?? []), { title, price, id, thumbnail, amount: 1 }])
-              );
-            }
-          }} className="btn btn-sm text-dark p-0"><i className="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</button>
+          <Link to={link} className="btn btn-sm text-dark p-0"><i className="fas fa-shopping-cart text-primary mr-1"></i>Buy</Link>
         </div>
       </div>
     </div>
   )
+
+  // function addToCart() {
+  //   return () => {
+  //     const product = cart?.find((item) => item.id === id);
+  //     if (product)
+  //       updateCart(
+  //         updateCartItemAmount(
+  //           cart,
+  //           product,
+  //           "INCREAMENT"
+  //         )
+  //       );
+  //     else {
+  //       updateCart([...(cart ?? []), { title, price, id, thumbnail, amount: 1 }]);
+  //       localStorage.setItem(
+  //         "cart",
+  //         JSON.stringify([...(cart ?? []), { title, price, id, thumbnail, amount: 1 }])
+  //       );
+  //     }
+  //   };
+  // }
 };
 
 export default Products;

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { SCREENS } from "../navigation/constants";
 
 /* eslint-disable react/prop-types */
 const Navbar = ({
@@ -19,11 +20,11 @@ const Navbar = ({
                 <a href="#" className="nav-link" data-toggle="dropdown">Courses<i className="fa fa-angle-down float-right mt-1"></i></a>
                 <div className="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
                   {courses?.map((course, index) => (
-                    <a href="" className="dropdown-item" key={index}>{course.title}</a>
+                    <Link to={SCREENS.COURSE(course.id)} className="dropdown-item" key={index}>{course.title}</Link>
                   ))}
                 </div>
               </div>
-              <a href="" className="nav-item nav-link">Plans</a>
+              <Link to={SCREENS.SHOP} className="nav-item nav-link">Plans</Link>
             </div>
           </nav>
         </div>
@@ -40,13 +41,13 @@ const Navbar = ({
                 <Link to="/" className="nav-item nav-link active">Home</Link>
                 <Link to="/shop" className="nav-item nav-link">Plans</Link>
                 <Link to="/shop" className="nav-item nav-link">Courses</Link>
-                <Link to="/detail" className="nav-item nav-link">About Us</Link>
+                {/* <Link to="/detail" className="nav-item nav-link">About Us</Link> */}
                 <Link to="/contact" className="nav-item nav-link">Contact</Link>
               </div>
-              <div className="navbar-nav ml-auto py-0">
+              {/* <div className="navbar-nav ml-auto py-0">
                 <a href="" className="nav-item nav-link">Login</a>
                 <a href="" className="nav-item nav-link">Register</a>
-              </div>
+              </div> */}
             </div>
           </nav>
           <div id="header-carousel" className="carousel slide" data-ride="carousel">

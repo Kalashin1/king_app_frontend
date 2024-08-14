@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 /* eslint-disable react/prop-types */
 const Products = ({
   courses
@@ -11,7 +13,8 @@ const Products = ({
         {courses?.map(({
           thumbnail,
           title,
-          price
+          price,
+          link
         }, index) => (
           <div className="col-lg-3 col-md-6 col-sm-12 pb-1" key={index}>
             <div className="card product-item border-0 mb-4">
@@ -26,7 +29,7 @@ const Products = ({
               </div>
               <div className="card-footer d-flex justify-content-between bg-light border">
                 <a href="" className="btn btn-sm text-dark p-0"><i className="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                <a href="" className="btn btn-sm text-dark p-0"><i className="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
+                <Link to={link} className="btn btn-sm text-dark p-0"><i className="fas fa-shopping-cart text-primary mr-1"></i>Buy</Link>
               </div>
             </div>
           </div>

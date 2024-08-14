@@ -7,6 +7,7 @@ import ProductDescription from "../product/components/product-description";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getCourseById } from "./helper";
+import { SCREENS } from "../../navigation/constants";
 const Course = () => {
   const { id } = useParams();
   const [course, setCourse] = useState()
@@ -32,7 +33,10 @@ const Course = () => {
 
   return (
     <Layout showCustomNavbar={true} CustomNavbar={Navbar}>
-      <BreadCrumb />
+      <BreadCrumb
+        firstLevel={{ text: "Course", link: SCREENS.SHOP }}
+        currentPage="Course"
+      />
       <div className="container-fluid py-5">
         <div className="row px-xl-5">
           <ProductImageCarousel images={[course?.thumbnail]} />

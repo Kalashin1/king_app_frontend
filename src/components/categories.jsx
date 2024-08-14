@@ -1,4 +1,6 @@
 /* eslint-disable react/prop-types */
+import { Link } from "react-router-dom";
+import { SCREENS } from "../navigation/constants";
 const Categories = ({
   courses,
   plans
@@ -9,15 +11,15 @@ const Categories = ({
   const Category = ({
     text,
     image,
-    amount
+    // amount
   }) => {
     return (
       <div className="col-lg-4 col-md-6 pb-1">
         <div className="cat-item d-flex flex-column border mb-4" style={{ padding: '30px' }}>
-          <p className="text-right">{amount} {String(text).toLowerCase()}</p>
-          <a href="" className="cat-img position-relative overflow-hidden mb-3">
+          {/* <p className="text-right">{amount} {String(text).toLowerCase()}</p> */}
+          <Link to={SCREENS.SHOP} className="cat-img position-relative overflow-hidden mb-3">
             <img className="img-fluid" src={image} alt="" />
-          </a>
+          </Link>
           <h5 className="font-weight-semi-bold m-0">{text}</h5>
         </div>
       </div>

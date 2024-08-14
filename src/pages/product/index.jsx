@@ -7,6 +7,7 @@ import ProductImageCarousel from "./components/product-image-carousel";
 // import ProductTab from "./components/product-tab";
 import { useEffect, useState } from "react";
 import { getPlanById } from "./helper";
+import { SCREENS } from "../../navigation/constants";
 
 const Product = () => {
   const { id } = useParams();
@@ -29,7 +30,10 @@ const Product = () => {
   }, [id])
   return (
     <Layout showCustomNavbar={true} CustomNavbar={Navbar}>
-      <BreadCrumb />
+      <BreadCrumb
+        currentPage="Product"
+        firstLevel={{ link: SCREENS.PLAN(plan?.id), text: "Product" }}
+      />
       <div className="container-fluid py-5">
         <div className="row px-xl-5">
           <ProductImageCarousel images={[plan?.thumbnail]} />

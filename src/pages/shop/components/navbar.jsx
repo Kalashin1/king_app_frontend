@@ -57,10 +57,10 @@ const Navbar = ({
                   </div>
                 </div> */}
               </div>
-              <div className="navbar-nav ml-auto py-0">
+              {/* <div className="navbar-nav ml-auto py-0">
                 <a href="" className="nav-item nav-link">Login</a>
                 <a href="" className="nav-item nav-link">Register</a>
-              </div>
+              </div> */}
             </div>
           </nav>
         </div>

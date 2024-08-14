@@ -5,6 +5,7 @@ import Navbar from "./components/navbar";
 import Products from "./components/products";
 import { useEffect, useState } from "react";
 import { getDBITEMS } from "../home/helper";
+import { SCREENS } from "../../navigation/constants";
 
 const Shop = () => {
 
@@ -24,7 +25,10 @@ const Shop = () => {
   }, [])
   return (
     <Layout showCustomNavbar={true} CustomNavbar={Navbar}>
-      <BreadCrumb />
+      <BreadCrumb
+        currentPage="Shop"
+        firstLevel={{ text: "Products", link: SCREENS.SHOP }}
+      />
       <div className="container-fluid pt-5">
         <div className="row px-xl-5">
           {/* <ShopSidebar /> */}
