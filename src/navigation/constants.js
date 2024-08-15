@@ -4,5 +4,6 @@ export const SCREENS = {
   COURSE: (id) => `/course/${id ? id : ":id"}`,
   CART: "/cart/",
   CONTACT: '/contact',
+  HOME: "/"
 
 }

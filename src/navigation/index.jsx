@@ -13,6 +13,10 @@ const router = createBrowserRouter([
     element: <Home />
   },
   {
+    index: SCREENS.HOME,
+    element: <Home />
+  },
+  {
     path: SCREENS.SHOP,
     element: <Shop />
   },

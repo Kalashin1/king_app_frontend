@@ -30,9 +30,9 @@ const Navbar = ({
         </div>
         <div className="col-lg-9">
           <nav className="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
-            <a href="" className="text-decoration-none d-block d-lg-none">
+            <Link to={SCREENS.HOME} className="text-decoration-none d-block d-lg-none">
               <img width={100} height={100} src="/images/logo.svg" />
-            </a>
+            </Link>
             <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
               <span className="navbar-toggler-icon"></span>
             </button>
@@ -58,7 +58,7 @@ const Navbar = ({
                   <div className="p-3" style={{ maxWidth: '700px' }}>
                     <h4 className="text-light text-uppercase font-weight-medium mb-3">10% Off Your First Order</h4>
                     <h3 className="display-4 text-white font-weight-semi-bold mb-4">Building Plans</h3>
-                    <a href="" className="btn btn-light py-2 px-3">Shop Now</a>
+                    <Link to={SCREENS.SHOP} className="btn btn-light py-2 px-3">Shop Now</Link>
                   </div>
                 </div>
               </div>
@@ -68,7 +68,7 @@ const Navbar = ({
                   <div className="p-3" style={{ maxWidth: '700px' }}>
                     <h4 className="text-light text-uppercase font-weight-medium mb-3">10% Off Your First Order</h4>
                     <h3 className="display-4 text-white font-weight-semi-bold mb-4">Engineering Courses</h3>
-                    <a href="" className="btn btn-light py-2 px-3">Shop Now</a>
+                    <Link to={SCREENS.SHOP} className="btn btn-light py-2 px-3">Shop Now</Link>
                   </div>
                 </div>
               </div>
