@@ -17,12 +17,14 @@ const Home = () => {
   useEffect(() => {
     const set_up = async () => {
       const [_courses, _plans] = await getDBITEMS()
-      setCourses(_courses)
+      setCourses(_courses.map((course) => ({ ...course, type: "course" })))
       setPlans(_plans)
     }
 
     set_up();
   }, [])
+
+  console.log("courses", courses);
 
   return (
     <Layout>

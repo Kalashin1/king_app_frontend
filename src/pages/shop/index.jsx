@@ -18,6 +18,7 @@ const Shop = () => {
         ..._plans.map((plan) => ({ ...plan, type: "plan" })),
         ..._courses.map((course) => ({ ...course, type: "course" }))
       ].sort((a, b) => a.title > b.title)
+      console.log("products", _products);
       setProducts(_products)
     }
 

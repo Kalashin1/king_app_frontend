@@ -28,7 +28,7 @@ const Categories = ({
   return (
     <div className="container-fluid pt-5">
       <div className="text-center mb-4">
-        <h2 className="section-title px-5"><span className="px-2">Our Courses</span></h2>
+        <h2 className="section-title px-5"><span className="px-2">Our Services</span></h2>
       </div>
       <div className="row px-xl-5 pb-3">
         {category_array.map((category, index) => (

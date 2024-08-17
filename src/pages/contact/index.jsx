@@ -1,4 +1,5 @@
 import BreadCrumb from "../../components/breadcrumb";
+import { SCREENS } from "../../navigation/constants";
 import Layout from "../layout";
 import Navbar from "../shop/components/navbar";
 import ContactDetails from "./components/contact-details";
@@ -7,7 +8,7 @@ import ContactForm from "./components/contact-form";
 const Contact = () => {
   return (
     <Layout showCustomNavbar={true} CustomNavbar={Navbar}>
-      <BreadCrumb />
+      <BreadCrumb currentPage="Home" title="Contact Us" firstLevel={{ text: "Contact Us", link: SCREENS.CONTACT }} />
 
       <div className="container-fluid pt-5">
         <div className="text-center mb-4">

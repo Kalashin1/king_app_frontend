@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { SCREENS } from "../navigation/constants";
 
 /* eslint-disable react/prop-types */
 const Products = ({
@@ -14,7 +15,8 @@ const Products = ({
           thumbnail,
           title,
           price,
-          link
+          link,
+          id
         }, index) => (
           <div className="col-lg-3 col-md-6 col-sm-12 pb-1" key={index}>
             <div className="card product-item border-0 mb-4">
@@ -28,8 +30,8 @@ const Products = ({
                 </div>
               </div>
               <div className="card-footer d-flex justify-content-between bg-light border">
-                <a href="" className="btn btn-sm text-dark p-0"><i className="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                <Link to={link} className="btn btn-sm text-dark p-0"><i className="fas fa-shopping-cart text-primary mr-1"></i>Buy</Link>
+                <Link to={SCREENS.COURSE(id)} className="btn btn-sm text-dark p-0"><i className="fas fa-eye text-primary mr-1"></i>View Detail</Link>
+                <Link to={`${link}`} target="_blank" className="btn btn-sm text-dark p-0"><i className="fas fa-shopping-cart text-primary mr-1"></i>Buy</Link>
               </div>
             </div>
           </div>
