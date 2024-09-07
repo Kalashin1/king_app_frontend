@@ -28,16 +28,7 @@ const Footer = () => {
                 <Link className="text-dark mb-2" to={SCREENS.CONTACT}><i className="fa fa-angle-right mr-2"></i>Contact</Link>
               </div>
             </div>
-            <div className="col-md-4 mb-5">
-              <h5 className="font-weight-bold text-dark mb-4">Quick Links</h5>
-              <div className="d-flex flex-column justify-content-start">
-                <Link to="" className="text-dark mb-2"><i className="fa fa-angle-right mr-2"></i>Home</Link>
-                <Link to={SCREENS.SHOP} className="text-dark mb-2"><i className="fa fa-angle-right mr-2"></i>Shop</Link>
-                <Link className="text-dark mb-2" to={SCREENS.SHOP}><i className="fa fa-angle-right mr-2"></i>Products</Link>
-                {/* <Link className="text-dark mb-2" to="/"><i className="fa fa-angle-right mr-2"></i>Shopping Cart</Link> */}
-                <Link className="text-dark mb-2" to="/"><i className="fa fa-angle-right mr-2"></i>Contact</Link>
-              </div>
-            </div>
+            
             {/* <div className="col-md-4 mb-5">
               <h5 className="font-weight-bold text-dark mb-4">Newsletter</h5>
               <form action="">
