@@ -2,9 +2,7 @@ import { Link } from "react-router-dom";
 import { SCREENS } from "../navigation/constants";
 
 /* eslint-disable react/prop-types */
-const Navbar = ({
-  courses
-}) => {
+const Navbar = () => {
 
   return (
     <div className="container-fluid mb-5">
