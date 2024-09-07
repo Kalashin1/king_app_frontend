@@ -9,7 +9,7 @@ const Navbar = ({
   return (
     <div className="container-fluid mb-5">
       <div className="row border-top px-xl-5">
-        <div className="col-lg-3 d-none d-lg-block">
+        {/* <div className="col-lg-3 d-none d-lg-block">
           <a className="btn shadow-none d-flex align-items-center justify-content-between bg-primary text-white w-100" data-toggle="collapse" href="#navbar-vertical" style={{ height: '65px', marginTop: '-1px', padding: '0 30px' }}>
             <h6 className="m-0">Categories</h6>
             <i className="fa fa-angle-down text-dark"></i>
@@ -27,8 +27,8 @@ const Navbar = ({
               <Link to={SCREENS.SHOP} className="nav-item nav-link">Plans</Link>
             </div>
           </nav>
-        </div>
-        <div className="col-lg-9">
+        </div> */}
+        <div className="col-lg-12">
           <nav className="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
             <Link to={SCREENS.HOME} className="text-decoration-none d-block d-lg-none">
               <img width={100} height={100} src="/images/logo.svg" />
