@@ -1,5 +1,7 @@
 import { useContext } from "react";
 import { ShopContext } from "../pages/layout";
+import { Link } from "react-router-dom";
+import { SCREENS } from "../navigation/constants";
 const Topbar = () => {
 
   const {
@@ -41,9 +43,9 @@ const Topbar = () => {
       </div>
       <div className="row align-items-center py-3 px-xl-5">
         <div className="col-lg-3 d-none d-lg-block">
-          <a href="" className="text-decoration-none">
+          <Link to={SCREENS.HOME} className="text-decoration-none">
             <img width={80} height={80} src="/images/logo.svg" />
-          </a>
+          </Link>
         </div>
         {/* <div className="col-lg-6 col-6 text-left">
           <form action="">

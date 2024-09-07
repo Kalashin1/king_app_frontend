@@ -16,7 +16,7 @@ const Navbar = ({
           <nav className="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0 bg-light" id="navbar-vertical" style={{ width: 'calc(100% - 30px)', zIndex: 1 }}>
             <div className="navbar-nav w-100 overflow-hidden" style={{ height: '410px' }}>
               <div className="nav-item dropdown">
-                <Link to="#" className="nav-link" data-toggle="dropdown">Courses <i className="fa fa-angle-down float-right mt-1"></i></Link>
+                <Link to={SCREENS.SHOP} className="nav-link" data-toggle="dropdown">Courses <i className="fa fa-angle-down float-right mt-1"></i></Link>
                 <div className="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
                   {courses && courses.map((course, index) => (
                     <Link to={SCREENS.COURSE(course.id)} className="dropdown-item" key={index}>{course.title}</Link>
@@ -37,15 +37,15 @@ const Navbar = ({
         </div>
         <div className="col-lg-9">
           <nav className="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
-            <a href="" className="text-decoration-none d-block d-lg-none">
-              <img width={100} height={100} src="/images/logo.svg" />
-            </a>
+            <Link to={SCREENS.HOME} className="text-decoration-none">
+              <img width={80} height={80} src="/images/logo.svg" />
+            </Link>
             <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse justify-content-between" id="navbarCollapse">
               <div className="navbar-nav mr-auto py-0">
-                <Link to="/" className="nav-item nav-link">Home</Link>
+                <Link to={SCREENS.HOME} className="nav-item nav-link">Home</Link>
                 <Link to={SCREENS.SHOP} className="nav-item nav-link active">Plans</Link>
                 <Link to={SCREENS.SHOP} className="nav-item nav-link">Courses</Link>
                 <Link to={SCREENS.CONTACT} className="nav-item nav-link">Contact</Link>
