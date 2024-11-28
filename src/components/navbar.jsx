@@ -51,7 +51,7 @@ const Navbar = () => {
           <div id="header-carousel" className="carousel slide" data-ride="carousel">
             <div className="carousel-inner">
               <div className="carousel-item active" style={{ height: '410px' }}>
-                <img className="img-fluid" src="/images/pexels-karolina-grabowska-4491459.jpg" alt="Image" />
+                <img className="img-fluid" src="/images/PHOTO-2024-11-17-10-57-49.jpg" alt="Image" />
                 <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
                   <div className="p-3" style={{ maxWidth: '700px' }}>
                     <h4 className="text-light text-uppercase font-weight-medium mb-3">10% Off Your First Order</h4>
@@ -61,7 +61,7 @@ const Navbar = () => {
                 </div>
               </div>
               <div className="carousel-item" style={{ height: '410px' }}>
-                <img className="img-fluid" src="/public/images/pexels-katerina-holmes-5905492.jpg" alt="Image" />
+                <img className="img-fluid" src="/public/images/PHOTO-2024-11-17-10-57-49.jpg" alt="Image" />
                 <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
                   <div className="p-3" style={{ maxWidth: '700px' }}>
                     <h4 className="text-light text-uppercase font-weight-medium mb-3">10% Off Your First Order</h4>

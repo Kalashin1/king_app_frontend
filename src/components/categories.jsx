@@ -6,7 +6,7 @@ const Categories = ({
   plans
 }) => {
 
-  const category_array = [{ text: 'Plans', image: '/images/pexels-karolina-grabowska-4491459.jpg', amount: plans.length }, { text: 'Courses', image: '/images/pexels-katerina-holmes-5905492.jpg', amount: courses.length }];
+  const category_array = [{ text: 'Plans', image: '/images/PHOTO-2024-11-17-10-57-49.jpg', amount: plans.length }, { text: 'Courses', image: '/images/PHOTO-2024-11-17-10-57-49.jpg', amount: courses.length }];
 
   const Category = ({
     text,
